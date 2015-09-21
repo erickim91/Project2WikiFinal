@@ -1,33 +1,42 @@
+<br>
+<br>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Articles</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Category</th>
-      <th>Author</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<!-- THIS IS WHERE MARKDOWN FORMAT BEGINS -->
 
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.content %></td>
-        <td><%= article.category %></td>
-        <td><%= article.author %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<hr />
+<% @articles.each do |article| %>
+  <h2><%= link_to article.title, article %></h1>
+    <h3> in
+        <% @categories.each do |category| %>
+        <% if category.id == article.category_id %>
+          <%= link_to category.title, category %>
+        <%end%>
+      <%end%>
+    </strong>
+    </h3>
+    <br>
+  <p>
+    <%= markdown(article.content) %>
+  </p>
+  <br>
+  <h4>Published on <%= article.created_at %> by
+    <% @authors.each do |author| %>
+      <% if author.id == article.author_id %>
+        <%= author.name %>
+      <%end%>
+    <%end%>
+    <br>
+    Last updated <%= time_ago_in_words article.updated_at %> ago
+  </h4>
 
-<br>
+  <% if article != @articles.last %>
+  <hr />
+  <% end %>
+<% end %>
 
-<%= link_to 'New Article', new_article_path %>
+<hr />
+<h4><%= link_to 'New Article', new_article_path %></h4>

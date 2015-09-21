@@ -10,6 +10,9 @@ class AuthorsController < ApplicationController
   # GET /authors/1
   # GET /authors/1.json
   def show
+    @articles = Article.all
+    @categories = Category.all
+    @authors = Author.all
   end
 
   # GET /authors/new

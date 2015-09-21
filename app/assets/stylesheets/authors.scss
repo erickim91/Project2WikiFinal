@@ -1,3 +1,115 @@
 // Place all the styles related to the Authors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+ul {
+  list-style-type: none;
+}
+
+nav {
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  box-shadow: rgb(204, 204, 204) 0px 4px 2px 0px;
+  font-size: 16px;
+  left: 0px;
+  line-height: 24px;
+  min-width: 980px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  right: 0px;
+  top: 0px;
+  position: fixed;
+  z-index: 9;
+}
+
+img {
+  margin-top: 20px;
+}
+h1{
+  color: rgb(102, 102, 102);
+  font-family: Roboto, sans-serif;
+  font-size: 38px;
+}
+h2{
+  font-size: 26px;
+}
+
+h3{
+  color: rgb(102, 102, 102);
+  font-family: Roboto, sans-serif;
+}
+
+.navbutton {
+  float: right;
+  margin-right: 30px;
+  font-size: 14px;
+  padding-top: 4px;
+}
+
+.login_section {
+  position: absolute;
+  max-width: 400px;
+  position: relative;
+  background-color: white;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.21);
+  border: 1px solid #C9C9C9;
+  border-radius: 3px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 60px;
+  font-family: Roboto, sans-serif;
+}
+
+.navlink {
+  text-decoration: none;
+}
+
+.loginbuttons {
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 50px;
+  width: 110px;
+}
+
+.wrapperbox {
+  border-style: double;
+}
+
+#frontpage_loginform {
+  width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#email {
+  width: 240px;
+  height: 30px;
+  font-size: 16pt;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+#passwd {
+  width: 240px;
+  height: 30px;
+  font-size: 16pt;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+#homebutton {
+  margin-left: 24px;
+  font-size: 18px;
+
+}

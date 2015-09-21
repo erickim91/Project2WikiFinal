@@ -8,7 +8,7 @@ body {
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
 }
 
@@ -45,6 +45,10 @@ div {
   padding: 2px;
   background-color: red;
   display: table;
+}
+
+.floatright {
+  float: right;
 }
 
 #error_explanation {

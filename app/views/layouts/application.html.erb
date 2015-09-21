@@ -6,7 +6,17 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+  <nav>
+    <ul id="links">
+      <li class="navbutton"><a class="navlink" href="/logout">Logout</a></li>
+      <li class="navbutton"><a class="navlink" href='/authors'>Users</a></li>
+      <li class="navbutton"><a class="navlink" href='/authors/:id'>Profile</a></li>
+    </ul>
+    <h2 id="homebutton"><a  class="navlink" href="/articles">THUGLIFE Wiki</a></h2>
+ </nav>
+ <br>
 
 <%= yield %>
 

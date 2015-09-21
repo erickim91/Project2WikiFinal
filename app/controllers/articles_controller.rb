@@ -4,17 +4,23 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.order("created_at DESC")
+    @categories = Category.all
+    @authors = Author.all
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @article = Article.find(params[:id])
+    @categories = Category.all
+    @authors = Author.all
   end
 
   # GET /articles/new
   def new
     @article = Article.new
+
   end
 
   # GET /articles/1/edit
@@ -30,6 +36,7 @@ class ArticlesController < ApplicationController
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
+
       else
         format.html { render :new }
         format.json { render json: @article.errors, status: :unprocessable_entity }
